@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ali Hamdan — Coming Soon</title>
+  <meta name="description" content="Ali Hamdan — personal site. Coming soon.">
+  <meta property="og:title" content="Ali Hamdan — Coming Soon">
+  <meta property="og:description" content="Personal site of Ali Hamdan — coming soon.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://alihamdan.com/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="wrap">
+    <section class="card">
+      <img src="favicon.svg" alt="AH" class="logo">
+      <h1>Ali Hamdan</h1>
+      <p class="tag">Site coming soon</p>
+      <p class="sub">I’m building something new here. Meanwhile, you can reach me any time.</p>
+      <div class="cta">
+        <a class="btn" href="mailto:ali@alihamdan.com">Email me: ali@alihamdan.com</a>
+      </div>
+      <div class="meta">
+        <span>&copy; <span id="year"></span> Ali Hamdan. All rights reserved.</span>
+      </div>
+    </section>
+  </main>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
