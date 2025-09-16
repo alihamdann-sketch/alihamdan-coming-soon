@@ -1,45 +1,22 @@
-/* Business + subtle digital background theme */
-:root{
-  --fg:#e6edf7;
-  --fg-dim:#b7c2d6;
-  --accent:#34d399;
-  --card:rgba(12,16,28,.55);
-  --border:rgba(255,255,255,.14);
-}
+body{margin:0;font-family:'Plus Jakarta Sans','Inter',system-ui; color:#e6edf7; background:#0a0f1a}
+.background{position:fixed; inset:0; z-index:-1}
+.background .photo{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; filter: blur(10px) saturate(1.1) brightness(.9)}
+.background .overlay{position:absolute; inset:0; width:100%; height:100%}
+.background .vignette{position:absolute; inset:0; background:linear-gradient(160deg, rgba(5,8,15,.5), rgba(5,8,15,.85))}
 
-*{box-sizing:border-box}
-html,body{height:100%;margin:0}
-body{font-family:'Plus Jakarta Sans','Inter',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; color:var(--fg); background:#0a0f1a}
-
-.background{position:fixed; inset:0; overflow:hidden; z-index:-1}
-.background .photo{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; filter: blur(8px) saturate(1.1) brightness(.9)}
-.background .grid{position:absolute; inset:0; width:100%; height:100%;}
-.background .vignette{position:absolute; inset:0; background: radial-gradient(1200px 600px at 20% -10%, rgba(14,165,233,.25), transparent 60%), radial-gradient(900px 480px at 100% 10%, rgba(52,211,153,.18), transparent 60%), linear-gradient(160deg, rgba(5,8,15,.5), rgba(5,8,15,.8))}
-
-.wrap{min-height:100%; display:flex; align-items:center; justify-content:center; padding:28px}
-.card{
-  width:min(860px, 92vw);
-  border:1px solid var(--border);
-  background:var(--card); backdrop-filter: blur(14px);
-  border-radius:22px; padding:36px 28px;
-  box-shadow: 0 30px 60px rgba(0,0,0,.45);
-}
-
+.wrap{min-height:100vh; display:flex; align-items:center; justify-content:center; padding:28px}
+.card{width:min(860px,92vw); border:1px solid rgba(255,255,255,.12); background:rgba(12,16,28,.55);
+  backdrop-filter: blur(14px); border-radius:22px; padding:36px 28px; box-shadow:0 30px 60px rgba(0,0,0,.45)}
 .brand{display:flex; gap:14px; align-items:center; margin-bottom:4px}
 .logo{width:52px; height:52px}
-h1{font-size:clamp(28px,5vw,40px); margin:0 0 2px 0}
-.tag{margin:0; color:var(--accent); font-weight:700; letter-spacing:.2px}
-.lead{margin:14px 0 24px; line-height:1.65; color:var(--fg)}
-
-.cta{display:flex; gap:12px; flex-wrap:wrap; align-items:center}
-.btn{
-  display:inline-block; padding:14px 18px; border-radius:12px; text-decoration:none;
-  border:1px solid var(--border); color:var(--fg); font-weight:700;
-  background:linear-gradient(180deg, rgba(52,211,153,.22), rgba(52,211,153,.08));
-  transition:transform .12s ease, border .2s ease, background .2s ease;
-}
+h1{font-size:clamp(28px,5vw,40px); margin:0}
+.tag{margin:0; color:#34d399; font-weight:700}
+.lead{margin:14px 0 24px; line-height:1.65}
+.cta{display:flex; gap:14px; flex-wrap:wrap; align-items:center}
+.btn{padding:14px 18px; border-radius:12px; text-decoration:none; border:1px solid rgba(255,255,255,.12);
+  color:#e6edf7; font-weight:700; background:linear-gradient(180deg, rgba(52,211,153,.22), rgba(52,211,153,.08))}
 .btn:hover{transform:translateY(-1px); border-color:#fff3}
-.pill{border:1px dashed var(--border); padding:10px 12px; border-radius:999px; text-decoration:none; color:var(--fg-dim)}
-.pill:hover{border-style:solid; color:var(--fg)}
-
-.meta{margin-top:22px; color:var(--fg-dim); font-size:14px}
+.icon-link{display:flex; align-items:center; justify-content:center; width:42px; height:42px; border-radius:50%;
+  border:1px solid rgba(255,255,255,.12); color:#b7c2d6; text-decoration:none}
+.icon-link:hover{color:#fff; border-color:#fff3; background:rgba(255,255,255,.06)}
+.meta{margin-top:22px; color:#b7c2d6; font-size:14px}
